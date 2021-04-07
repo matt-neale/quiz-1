@@ -1,0 +1,27 @@
+<%- include("../partials/header.ejs") %> <% if (loggedInUserName) { %>
+<form action="/clucks" method="POST">
+  <div class="mb-3">
+    <label for="content" name="content" class="form-label">Content</label>
+    <textarea
+      class="form-control"
+      name="content"
+      id="content"
+      rows="5"
+      placeholder="Whatchoo cluckin' 'bout?"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="imageUrl" class="form-label">Image Url</label>
+    <input
+      type="text"
+      name="imageUrl"
+      class="form-control"
+      id="imageUrl"
+      placeholder="https://i.imgur.com/qM6KaEy.gifv"
+    />
+    <input type="submit" value="Submit">Cluck!</input>
+  </div>
+</form>
+<% } else { %>
+<h1>Please sign in before clucking.</h1>
+<% } %> <%- include("../partials/footer.ejs") %>

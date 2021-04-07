@@ -1,0 +1,20 @@
+<%- include("../partials/header.ejs") %>
+<div class="container">
+  <div class="card">
+    <% for (let cluck of clucks) { %>
+    <div class="card-body">
+      <h5 class="card-title">
+        <img src="images/otherChicken.svg" alt="" width="30" height="25" />
+        <%= cluck.username + "------ " + cluck.createdAt%>
+      </h5>
+      <p class="card-text"><%= cluck.content %></p>
+    </div>
+    <img
+      src="<%= cluck.imageUrl %>"
+      class="card-img-bottom"
+      style="width: 500px"
+    />
+    <% } %>
+  </div>
+</div>
+<%- include("../partials/footer.ejs")%>

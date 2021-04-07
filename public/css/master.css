@@ -1,0 +1,9 @@
+.card {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.navbar {
+  padding: 10px;
+}
